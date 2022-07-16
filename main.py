@@ -81,6 +81,7 @@ def restart_game(window):
     pygame.display.update()
     button_clicked = False
     global RUNNING
+    dataset.plot()
 
     while RUNNING and not button_clicked:
         pygame.time.delay(DELAY)
@@ -108,7 +109,6 @@ def get_path(snack, snake):
     a_start_res = a_start(snack, snake)
     dataset.add(a_start_res.get('elapsed_time'), a_start_res.get('num_of_expanded_cubes'),
                 bfs_res.get('elapsed_time'), bfs_res.get('num_of_expanded_cubes'))
-    dataset.plot()
 
     # current_cube = bfs_res.get('leaf')
     current_cube = a_start_res.get('leaf')
@@ -199,6 +199,7 @@ def main():
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
+                dataset.plot()
                 pygame.quit()
                 RUNNING = False
                 break

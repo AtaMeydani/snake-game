@@ -14,3 +14,5 @@ In this game, two algorithms **A \*** and **BFS** are used. In order for the sna
 
 ### Comparison of algorithms:
 In the previous section, it was said that both routing algorithms run, the reason for this is to compare algorithms under the same conditions. For better comparison, the number of expanded nodes and the execution time of each algorithm are stored in an Excel file and then the associated diagrams are drawn for ease of comparison.
+
+![Alt Text](./output/run.gif)
